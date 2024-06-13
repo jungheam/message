@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>채팅</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__btn">
+            <a href='/friends'>
+              <i class="fas fa-user fa-2x"></i>
+            </a>
+          </li>
+          <li class="nav__btn">
+            <a class='active' href='/chats'>
+              <i class="fas fa-comment fa-2x"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+  <div class="container">
+    <main class="chat-screen">
+        <section class="chat-screen__bar">
+            <div class="user chat-user">
+                <div class="user__column">
+                    <div class="user__pic"></div>
+                </div>
+                <div class="user__column">
+                    <p class="user__nick">채팅방 이름</p>
+                    <p class="user__message">
+                        <i class="fas fa-user"></i> 2
+                    </p>
+                </div>
+            </div>
+        </section>
+        <ul class="chat-screen__comments">
+          <li class="comment user-msg">이제부턴 여름인 거 같아.</li>
+          <li class="comment bot-msg">...</li>
+          <li class="comment user-msg">너무 더워</li>
+          <li class="comment bot-msg">그래도 공부는 해야 해.</li>    
+        </ul>
+    </main>
+    <form class="chat-form" onsubmit="return false;">
+        <div class="chat-form__plugin">
+            <i class="far fa-smile chat-form__icon"></i>
+            <i class="fas fa-paperclip chat-form__icon"></i>
+            <i class="far fa-calendar-check chat-form__icon"></i>
+        </div>  
+        <div class="chat-form__field">
+            <textarea class="chat-form__msg" placeholder="메시지를 입력하세요..."></textarea>
+            <input class="chat-form__bt" type="submit" value="전송">
+        </div>
+    </form>
+</div>
+<script src="https://kit.fontawesome.com/c8e2b99a17.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>My website</title>
+    </head>
+    <body>
+        <div>
+            Go to:
+            <a href="{{ url_for('friends_func') }}">친구</a>
+            <a href="{{ url_for('chats_func') }}">채팅</a>
+            <a href="{{ url_for('chat_func')}}">채팅목록</a>
+        </div>
+        {% block content %}{% endblock %}
+    </body>
+</html>
